@@ -11,13 +11,11 @@ let newGallery = [...galleryItems].map(({ preview, original, description }) => {
 });
 
 gallery.innerHTML = newGallery.join(" ");
-
 gallery.addEventListener("click", (event) => {
   event.preventDefault();
+});
 
-  var lightbox = new SimpleLightbox(".gallery a", {
-    captionsData: "alt",
-    captionDelay: 250,
-  });
-  lightbox.open();
+var lightbox = new SimpleLightbox(".gallery a", {
+  captionsData: "alt",
+  captionDelay: 250,
 });
